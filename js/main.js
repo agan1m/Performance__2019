@@ -1,5 +1,6 @@
 "use strict";
 
+
 $('.card').each(function(e) {
     if ($(this).hasClass('card_size_s')) {
         $(this).css({'border-radius': '22px'})
@@ -7,6 +8,7 @@ $('.card').each(function(e) {
         $(this).css({'border-radius': '54px'})
     }
 });
+
 
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -100,6 +102,13 @@ var storage, initCriticalCam = function () {
         y.push(e), m = e.clientX, u = e.clientY, p = parseInt(g.style.backgroundPositionX, 10), v = parseInt(g.style.backgroundPositionY, 10), 2 == y.length && (h = Math.atan2(y[1].clientY - y[0].clientY, y[1].clientX - y[0].clientX) * (180 / Math.PI)), g.addEventListener("pointermove", t)
     }), document.addEventListener("pointerup", e), g.addEventListener("onpointerup", e)
 };
+
+$(document).ready(function(){
+
+    var carousel = $("#carousel");
+
+    carousel.owlCarousel();
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttonsContainer = document.querySelector(".buttons-wrap");
