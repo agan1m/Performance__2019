@@ -36,43 +36,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-const arrowLeftScens = document.querySelector('.scenarios__paginator .paginator__arrow_left');
-const arrowRightScens = document.querySelector('.scenarios__paginator .paginator__arrow_right');
-const panelCountScens = document.querySelectorAll('.scenarios__panel').length;
-const pageCountScens = document.querySelectorAll('.scenarios__page').length;
-const scenarios = document.querySelector('.scenarios');
-const pagiantorScens = document.querySelector('.scenarios__paginator');
-let currentPage = 1;
-
-
-
-
-const selectButton = document.querySelector('.filter__select-button');
-const selectButtonText = document.querySelector('.filter__select-button .button__text');
-const selectOptions = document.querySelectorAll('.filter__select-item');
-const popup = document.querySelector('.filter__select-popup');
-
-
-
-let widths = '';
-window.addEventListener('scroll', function() {
-    widths += document.querySelectorAll('body')[0].offsetWidth;
-
-});
-
-selectOptions.forEach(o => {
-    o.addEventListener('click', function(e) {
-        document.querySelector('#' + e.target.dataset.group).checked = true;
-
-        selectOptions.forEach(opt => opt.classList.toggle('filter__select-item_checked', false));
-        e.target.classList.toggle('filter__select-item_checked', true);
-        popup.classList.toggle('filter__select-popup_open', false);
-        selectButtonText.innerText = e.target.innerText;
-    })
-});
-
-
-
 var storage, initCriticalCam = function () {
     var u, m, p, v, h, y = new Array, g = document.querySelector(".critical-cam"), f = 0, S = 100, q = 100;
     g.style.backgroundPosition = "0px 0px", g.style.backgroundSize = "100%", g.style.filter = "brightness(100%)";
