@@ -66,6 +66,7 @@ var storage, initCriticalCam = function () {
     }), document.addEventListener("pointerup", e), g.addEventListener("onpointerup", e)
 };
 
+
 document.addEventListener("DOMContentLoaded", function () {
     const buttonsContainer = document.querySelector(".buttons-wrap");
     const fridgeInfoContainer = document.querySelector(".card_size_m:nth-child(8) .card-description");
