@@ -66,6 +66,12 @@ var storage, initCriticalCam = function () {
     }), document.addEventListener("pointerup", e), g.addEventListener("onpointerup", e)
 };
 
+$(document).ready(function(){
+
+    var carousel = $("#carousel");
+
+    carousel.owlCarousel();
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     const buttonsContainer = document.querySelector(".buttons-wrap");
